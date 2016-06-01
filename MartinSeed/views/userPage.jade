@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+    p Your username is #{userObj.username} and have the role -> #{userObj.role}
+  
+  p Try making a POST request to api/names with token below, to se if you have access.
+  p token created: #{token}

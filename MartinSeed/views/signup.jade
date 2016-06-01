@@ -1,0 +1,24 @@
+extends layout
+
+block content
+	h2 #{title}
+	h3 Create new user:
+	form(name="loginForm", action="/signup", method="POST")
+		p Type in a new username:
+		input(type="text", name="username") 
+		p Type in a new password:
+		input(type="text", name="password")
+		br
+		br
+		input(type="checkbox", name="role" value="admin")
+		label admin
+		input(type="checkbox", name="role" value="user")
+		label user
+		br
+		br
+		input(type="submit", value="submit")
+		
+	p #{errorMsg}
+	
+	a(href="http://localhost:3000/login") Back to login
+  
